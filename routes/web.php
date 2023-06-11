@@ -21,4 +21,10 @@ Auth::routes([
     'register' => false,
 ]);
 
-Route::get('/home', App\Http\Livewire\Home\Index::class)->name('home');
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/home', App\Http\Livewire\Home\Index::class)->name('home');
+
+
+    Route::get('/category', App\Http\Livewire\Category\Index::class)->name('category.index');
+});

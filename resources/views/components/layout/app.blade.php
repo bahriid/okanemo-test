@@ -17,6 +17,9 @@
     @stack('styles')
     @livewireStyles
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <style>
+        [x-cloak] { display: none !important; }
+    </style>
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -111,7 +114,7 @@
                                     class="menu-item me-0 me-lg-2 {{request()->segment(1) == 'category' ? 'here show' : ''}}">
                                     <!--begin:Menu link-->
                                     <a class="menu-link py-3"
-                                       href="#"
+                                       href="{{route('category.index')}}"
                                        target="_blank">
                                         <span class="menu-title">Category</span>
                                     </a>
