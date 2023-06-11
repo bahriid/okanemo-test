@@ -2,10 +2,7 @@
 
 namespace App\Http\Livewire\Category;
 
-use App\Http\Requests\CategoryStoreRequest;
-use App\Repositories\Data\AcceptedLoan\AcceptedLoanRepository;
 use App\Services\Category\CategoryService;
-use App\Utilities\Responses;
 use Livewire\Component;
 
 class Index extends Component
@@ -20,6 +17,7 @@ class Index extends Component
         'edit_table',
         'delete_table'
     ];
+
 
     public function delete_table($data, CategoryService $category): void
     {

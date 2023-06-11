@@ -2,10 +2,8 @@
 
 namespace App\Services\Category;
 
-use App\Http\Requests\CategoryStoreRequest;
 use App\Models\Category;
 use App\Models\Product;
-use App\Utilities\Responses;
 use DB;
 use Illuminate\Support\Facades\Validator;
 

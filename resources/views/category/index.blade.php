@@ -19,7 +19,7 @@
                 <div class="d-flex justify-content-end">
                     <!--begin::Add user-->
                     <button type="button" class="btn btn-primary" wire:click="openModal">
-                        <i class="ki-outline ki-plus fs-2"></i>Add Product
+                        <i class="ki-outline ki-plus fs-2"></i>Add Category
                     </button>
                     <!--end::Add user-->
                 </div>

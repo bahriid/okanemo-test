@@ -104,8 +104,7 @@
                                     class="menu-item me-0 me-lg-2 {{request()->segment(1) == 'product' ? 'here show' : ''}}">
                                     <!--begin:Menu link-->
                                     <a class="menu-link py-3"
-                                       href="#"
-                                       target="_blank">
+                                       href="{{route('product.index')}}">
                                         <span class="menu-title">Product</span>
                                     </a>
                                     <!--end:Menu link-->
@@ -114,8 +113,7 @@
                                     class="menu-item me-0 me-lg-2 {{request()->segment(1) == 'category' ? 'here show' : ''}}">
                                     <!--begin:Menu link-->
                                     <a class="menu-link py-3"
-                                       href="{{route('category.index')}}"
-                                       target="_blank">
+                                       href="{{route('category.index')}}">
                                         <span class="menu-title">Category</span>
                                     </a>
                                     <!--end:Menu link-->
