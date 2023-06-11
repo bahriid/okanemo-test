@@ -33,7 +33,7 @@
     </div>
 
     <!--begin::Modal - Add task-->
-    <div class="modal fade" id="{{$modal_id}}" tabindex="-1" aria-hidden="true">
+    <div wire:ignore.self class="modal fade" id="{{$modal_id}}" tabindex="-1" aria-hidden="true">
         <!--begin::Modal dialog-->
         <div class="modal-dialog modal-dialog-centered mw-650px">
             <!--begin::Modal content-->
@@ -51,9 +51,12 @@
                 </div>
                 <!--end::Modal header-->
                 <!--begin::Modal body-->
-                <div class="modal-body">
-                    <!--begin::Form-->
-                    <form id="kt_modal_add_user_form" class="form" wire:submit.prevent="submit">
+                <form id="kt_modal_add_user_form" class="form" wire:submit.prevent="submit">
+                    <div class="modal-body">
+                        <!--begin::Form-->
+                        <div>
+                            <x-alert.validation/>
+                        </div>
                         <div class="fv-row mb-7 fv-plugins-icon-container">
                             <label class="required fs-6 fw-semibold mb-2">Name</label>
                             <input type="text" wire:model.defer="name"
@@ -69,9 +72,9 @@
                             </button>
                         </div>
                         <!--end::Actions-->
-                    </form>
-                    <!--end::Form-->
-                </div>
+                        <!--end::Form-->
+                    </div>
+                </form>
                 <!--end::Modal body-->
             </div>
             <!--end::Modal content-->
